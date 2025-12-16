@@ -6,212 +6,280 @@
 
 .style {
     text-align: center !important;
-    color: rgba(255, 255, 255, 0.802) !important;
-    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 17, 0, 1) 57%, rgba(0, 0, 0, 1) 100%)!important;
+    color: rgba(255, 255, 255, 0.825);
+    width: 100%;
+    background: linear-gradient(-55deg,
+            #db1717,
+            #db1717,
+            #111,
+            #db1717,
+            #111,
+            #111);
+    background-size: 100% 100%;
+    animation: gradient 20s ease infinite;
+
 }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
 
-.bg {
-    background: #db1717 !important;
-    border: none !important;
-}
+        25% {
+            background-position: 50% 100%;
+        }
 
-.card {
-    height: 1050px !important;
-    background: rgb(255, 255, 255, 0.4) !important;
-}
+        50% {
+            background-position: 100% 50%;
+        }
 
-.card img {
-    width: 100% !important;
-    height: 350px !important;
-}
+        75% {
+            background-position: 50% 0%;
+        }
 
-.navbar {
-    background: #111 !important;
-}
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 
-.btn {
-    color: #db1717;
-}
-body {
-  width: 100%;
-  background: linear-gradient(
-    -45deg,
-    #db1717,
-    #db1717,
-    #111,
-    #db1717,
-    #111,
-    #111
-  );
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
-  height: 200%;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 50% 100%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.searchBox {
-  display: flex;
-  max-width: 230px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  background: #232323;
-  border-radius: 50px;
-  position: relative;
-}
-
-.searchButton {
-  color: white;
-  position: absolute;
-  right: 8px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--gradient-2, linear-gradient(90deg, #f57b2a 0%, #fd0000 100%));
-  border: 0;
-  display: inline-block;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-}
-/*hover effect*/
-button:hover {
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
-  transform: translateY(-3px);
-}
-/*button pressing effect*/
-button:active {
-  box-shadow: none;
-  transform: translateY(0);
-}
-
-.searchInput {
-  border: none;
-  background: none;
-  outline: none;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  padding: 24px 46px 24px 26px;
-}
-
-/* From Uiverse.io by barisdogansutcu */ 
-.love-heart:before,#switch {
- display: none;
-}
-
-.love-heart, .love-heart::after {
- border-color: hsl(231deg 28% 86%);
- border: 1px solid;
- border-top-left-radius: 100px;
- border-top-right-radius: 100px;
- width: 10px;
- height: 8px;
- border-bottom: 0
-}
-
-.round {
- position: absolute;
- z-index: 1;
- width: 8px;
- height: 8px;
- background: hsl(0deg 0% 100%);
- box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
- border-radius: 100%;
- left: 0px;
- bottom: -1px;
- transition: all .5s ease;
- animation: check-animation2 .5s forwards;
-}
-
-input:checked + label .round {
- transform: translate(0px, 0px);
- animation: check-animation .5s forwards;
- background-color: hsl(0deg 0% 100%);
-}
-
-@keyframes check-animation {
- 0% {
-  transform: translate(0px, 0px);
- }
-
- 50% {
-  transform: translate(0px, 7px);
- }
-
- 100% {
-  transform: translate(7px, 7px);
- }
-}
-
-@keyframes check-animation2 {
- 0% {
-  transform: translate(7px, 7px);
- }
-
- 50% {
-  transform: translate(0px, 7px);
- }
-
- 100% {
-  transform: translate(0px, 0px);
- }
-}
-
-.love-heart {
- box-sizing: border-box;
- position: relative;
- transform: rotate(-45deg) translate(-50%, -33px) scale(4);
- display: block;
- border-color: hsl(231deg 28% 86%);
- cursor: pointer;
- top: 0;
-}
-
-input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
- border-color: hsl(347deg 81% 61%);
- box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
-}
-
-.love-heart::after, .love-heart .bottom {
- content: "";
- display: block;
- box-sizing: border-box;
- position: absolute;
- border-color: hsl(231deg 28% 86%);
-}
-
-.love-heart::after {
- right: -9px;
- transform: rotate(90deg);
- top: 7px;
-}
-
-.love-heart .bottom {
- width: 11px;
- height: 11px;
- border-left: 1px solid;
- border-bottom: 1px solid;
- border-color: hsl(231deg 28% 86%);
- left: -1px;
- top: 5px;
- border-radius: 0px 0px 0px 5px;
-}
+    /* color: rgba(255, 255, 255, 0.802) !important;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 17, 0, 1) 57%, rgba(0, 0, 0, 1) 100%)!important; */
 
 
+
+    .bg {
+        background: #db1717 !important;
+        border: none !important;
+    }
+
+    .card {
+        height: 1050px !important;
+        background: rgb(255, 255, 255, 0.4) !important;
+    }
+
+    .card img {
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    .navbar {
+        background: #111 !important;
+    }
+
+    body {
+        width: 100%;
+        background: linear-gradient(-45deg,
+                #db1717,
+                #db1717,
+                #111,
+                #db1717,
+                #111,
+                #111);
+        background-size: 400% 400%;
+        animation: gradient 30s ease infinite;
+        height: 200%;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        25% {
+            background-position: 50% 100%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        75% {
+            background-position: 50% 0%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .searchBox {
+        display: flex;
+        max-width: 230px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        background: #232323;
+        border-radius: 50px;
+        position: relative;
+    }
+
+    .searchButton {
+        color: white;
+        position: absolute;
+        right: 8px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--gradient-2, linear-gradient(90deg, #f57b2a 0%, #fd0000 100%));
+        border: 0;
+        display: inline-block;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    }
+
+    /*hover effect*/
+    button:hover {
+        color: #fff;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+        transform: translateY(-3px);
+    }
+
+    /*button pressing effect*/
+    button:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+
+    .searchInput {
+        border: none;
+        background: none;
+        outline: none;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        padding: 24px 46px 24px 26px;
+    }
+
+    .love-heart:before,
+    #switch {
+        display: none;
+    }
+
+    .love-heart,
+    .love-heart::after {
+        border-color: hsl(231deg 28% 86%);
+        border: 1px solid;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        width: 10px;
+        height: 8px;
+        border-bottom: 0
+    }
+
+    .round {
+        position: absolute;
+        z-index: 1;
+        width: 8px;
+        height: 8px;
+        background: hsl(0deg 0% 100%);
+        box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+        border-radius: 100%;
+        left: 0px;
+        bottom: -1px;
+        transition: all .5s ease;
+        animation: check-animation2 .5s forwards;
+    }
+
+    input:checked+label .round {
+        transform: translate(0px, 0px);
+        animation: check-animation .5s forwards;
+        background-color: hsl(0deg 0% 100%);
+    }
+
+    @keyframes check-animation {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        50% {
+            transform: translate(0px, 7px);
+        }
+
+        100% {
+            transform: translate(7px, 7px);
+        }
+    }
+
+    @keyframes check-animation2 {
+        0% {
+            transform: translate(7px, 7px);
+        }
+
+        50% {
+            transform: translate(0px, 7px);
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+
+    .love-heart {
+        box-sizing: border-box;
+        position: relative;
+        transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+        display: block;
+        border-color: hsl(231deg 28% 86%);
+        cursor: pointer;
+        top: 0;
+    }
+
+    input:checked+.love-heart,
+    input:checked+.love-heart::after,
+    input:checked+.love-heart .bottom {
+        border-color: hsl(347deg 81% 61%);
+        box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+    }
+
+    .love-heart::after,
+    .love-heart .bottom {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border-color: hsl(231deg 28% 86%);
+    }
+
+    .love-heart::after {
+        right: -9px;
+        transform: rotate(90deg);
+        top: 7px;
+    }
+
+    .love-heart .bottom {
+        width: 11px;
+        height: 11px;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        border-color: hsl(231deg 28% 86%);
+        left: -1px;
+        top: 5px;
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    .btn {
+        padding: 17px 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all 0.5s ease;
+    }
+
+    .btn:hover {
+        letter-spacing: 3px;
+        background-color: hsl(0, 80%, 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(220, 24, 24) 0px 7px 29px 0px;
+    }
+
+    .btn:active {
+        letter-spacing: 3px;
+        background-color: hsl(0, 80%, 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(220, 24, 24) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
